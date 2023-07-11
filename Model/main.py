@@ -1,16 +1,13 @@
-# This is a sample Python script.
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sb
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+df = pd.read_csv('D:\Projects\ML\Wine Quality Prediction ML model\winequalityN.csv')
+print(df.head(2))
 
+#types of data present in each column of the dataset
+print(df.info())
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+#descriptive statistical measures of the dataset.
+print(df.describe().T)
